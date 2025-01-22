@@ -90,7 +90,7 @@
   </style>
 </head>
 
-<body>
+<body id="ID">
   <!-- Navigation bar -->
   <div class="navbar">
     <a href="#home">Home</a>
@@ -108,7 +108,9 @@
 
     <a href="#contact">Contact</a>
   </div>
-  <audio src="mp3/kiss-the-rain.mp3" type="audio/mp3" autoplay loop></audio>
+  <audio id="autoplay" controls autoplay >
+    <source src="mp3/kiss-the-rain.mp3" type="audio/mpeg">
+    </audio>
   <!-- Slide -->
 
   <div class="container">
@@ -167,6 +169,12 @@
     <script src="style.js"></script>
 
   </div>
-</body>
 
+</body>
+<script>
+
+  document.getElementById('ID').onclick = function(){
+        document.getElementById('autoplay').play();
+    };
+</script>
 </html>
